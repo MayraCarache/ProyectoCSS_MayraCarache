@@ -1,0 +1,127 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-image: url(./../imagenes/conocenos3.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+nav {
+  display: flex;
+  justify-content: end;
+  gap: 60px;
+  padding: 20px 20px 20px 0px;
+  background: linear-gradient(to right, transparent 25%, #edb399);
+  position: sticky;
+  top: 0px;
+}
+
+button {
+  display: inline-block;
+  width: 150px;
+  height: 50px;
+  border-radius: 20px;
+  border: 1px solid rgba(131, 54, 54, 0.414);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s ease-in;
+  z-index: 1;
+  box-shadow: inset 0 0 5px 0.3px #0e0804;
+  filter: drop-shadow(2px 10px 5px rgba(0, 0, 0, 0.419));
+  background: linear-gradient(to top right, rgba(0, 0, 0, 0.358) 30%, #edb399);
+}
+
+button::before,
+button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 0;
+  height: 100%;
+  transform: skew(15deg);
+  transition: all 0.5s;
+  overflow: hidden;
+  z-index: -1;
+}
+
+button::before {
+  left: -10px;
+  background: #531d07;
+}
+
+button::after {
+  right: -10px;
+  background: #ee6e29;
+}
+
+button:hover::before,
+button:hover::after {
+  width: 58%;
+}
+
+button:hover span {
+  color: #fed0c8;
+  transition: 0.3s;
+}
+
+button span {
+  color: #f6d6c8;
+  font-size: 18px;
+  transition: all 0.3s ease-in;
+}
+
+main {
+  /* Trabajar con columnas */
+  display: grid;
+
+  /* Dividir en 2 columnas iguales */
+  grid-template-columns: 1fr 1fr;
+
+  /* Centrar elementos en el medio (ambos ejes) de cada columna */
+  place-items: center;
+}
+
+h1 {
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 120px;
+  font-weight: 700;
+  color: rgb(247, 247, 247);
+  padding: 80px;
+  filter: drop-shadow(10px 10px 10px rgb(206, 187, 187));
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: end;
+  width: 100%;
+  border: 3px solid rgb(0, 0, 0);
+  padding: 40px;
+  background-color: rgba(185, 167, 167, 0.781);
+  border-radius: 70px;
+  box-shadow: 30px 30px 30px rgba(0, 0, 0, 0.364);
+  margin-top: 100px;
+}
+
+p {
+  text-align: justify;
+  font-size: 20px;
+  font-family: "Times New Roman";
+}
+/* block, none, flex, grid */
